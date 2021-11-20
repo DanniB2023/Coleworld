@@ -56,6 +56,116 @@ body{
     margin-top: -50px;
 }
 
+/*Sticky Nav Start*/
+.floating-social-icon{
+    position: absolute;
+    margin-top: 610px;
+    transform: translateY(-50%);
+    left: 0;
+    margin-left: 5px;
+}
+
+.floating-social-icon a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    /*margin-bottom: 30px;*/
+}
+
+.floating-social-icon a .icon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+}
+
+.floating-social-icon a .icon .nav-icon{
+    line-height: 40px;
+}
+
+.floating-social-icon a .text{
+    display: inline-block;
+    font-size: 14px;
+    background-color: #333;
+    height: 40px;
+    padding: 0 15px;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    left: 15px;
+    
+    transition: left .2s linear;
+    line-height: 40px;
+}
+
+.floating-social-icon a:hover .text{
+    left: 25px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.floating-social-icon a .text:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: #333;
+}
+
+.floating-social-icon a:nth-child(1) .text,
+.floating-social-icon a:nth-child(1) .icon,
+.floating-social-icon a:nth-child(1) .text:before{
+    background-color: #810000;
+}
+
+.floating-social-icon a:nth-child(2) .text,
+.floating-social-icon a:nth-child(2) .icon,
+.floating-social-icon a:nth-child(2) .text:before{
+    background-color: #151515;
+}
+
+.floating-social-icon a:nth-child(3) .text,
+.floating-social-icon a:nth-child(3) .icon,
+.floating-social-icon a:nth-child(3) .text:before{
+    background-color: #8a3ab9;
+}
+
+.floating-social-icon a:nth-child(4) .text,
+.floating-social-icon a:nth-child(4) .icon,
+.floating-social-icon a:nth-child(4) .text:before{
+    background-color: #4966ab;
+}
+
+.floating-social-icon a:nth-child(5) .text,
+.floating-social-icon a:nth-child(5) .icon,
+.floating-social-icon a:nth-child(5) .text:before{
+    background-color: #c4302b;
+}
+
+.floating-social-icon a:nth-child(6) .text,
+.floating-social-icon a:nth-child(6) .icon,
+.floating-social-icon a:nth-child(6) .text:before{
+    background-color: #118C4F;
+}
+
+.floating-social-icon a:nth-child(7) .text,
+.floating-social-icon a:nth-child(7) .icon,
+.floating-social-icon a:nth-child(7) .text:before{
+    background-color: #C0C0C0;
+}
+
+.floating-social-icon a:nth-child(8) .text,
+.floating-social-icon a:nth-child(8) .icon,
+.floating-social-icon a:nth-child(8) .text:before{
+    background-color: #a69c87;
+}
+
 /*Navbar Start*/
 hr{
     background-color: #464646;
@@ -82,7 +192,7 @@ hr{
 }
 
 #show-menu i{
-    color: #810000;
+    color: #a69c87;
 }
 
 .menu-bars-two {
@@ -137,14 +247,14 @@ hr{
 .nav-menu-items{
     width: 100%;
 }
-
+/*
 .nav-icon {
     padding: 1rem;
     color: #909090;
-}
+}*/
 
 #cole{
-    color: #810000;
+    color: #a69c87;
     padding-right: 0.2rem;
     margin: 0.5rem;
 }
@@ -176,20 +286,23 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} 
 
 .cole-world-follow{
     text-transform: lowercase;
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 16px;
     font-weight: 700; 
     background-color: #a69c87;
-    margin: 0rem 5rem 0rem 5rem;
+   
+    margin: 0rem 4rem 0rem 6.5rem;
+   
 }
 
 .list{
     
     margin: 1rem 2rem 1rem 2rem;
+    margin-left: 75px;
 }
 
 .circle{
@@ -204,6 +317,7 @@ hr{
     align-content: center;
     align-items: center;
     margin-top: 1.3rem;
+    margin-left: 32px;
 }
 
 .cole-world-name p{
@@ -211,6 +325,7 @@ hr{
     align-content: center;
     align-items: center;
     margin-top: 14px;
+    
 }
 
 .mode{
@@ -218,6 +333,7 @@ hr{
     margin-bottom: 1rem;
     line-height: .5rem;
     color: #810000;
+    margin-left: 32px;
 }
     
 
@@ -225,13 +341,14 @@ hr{
     margin-top: 1rem;
     margin-bottom: 10px;
     color: #151515;
+    margin-left: 55px;
 }
 
 .corner img{
     display: flex;
     position: absolute;
-    width: 14rem;
-    margin-top: 670px;
+    width: 10rem;
+    margin-top: 710px;
     margin-left: 10px;
     position: absolute;
 }
@@ -330,14 +447,44 @@ animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
     animation-name: rollIn;
  }
 
+ @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+  @media only screen and (max-width:393px){
+    .floating-social-icon{
+        margin-left: 18px;
+    }
 
+    .feed{
+        margin-right: 11px;
+    }
 
+}
 
 
 @media only screen and (max-width:375px){
-    .wrapper{
-        margin: 55px;
+    .floating-social-icon{
+        margin-left: 23px;
     }
+
+    .feed{
+        margin-right: 15px;
+    }
+
+}
+
+@media only screen and (max-width:360px){
+    .mode{
+       
+        margin-left: 39px;
+    }
+
+    .feed{
+        margin-right: 23px;
+    }
+
 }
 
 
